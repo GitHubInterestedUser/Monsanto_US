@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: FilterDisplayConfig.vm 9837 2005-05-19 21:51:08Z cthomas $
+     $HeadURL: http://steelsvn/312_repo/trunk/build/efmcore/merge/enterasys/src/online/app/FilterDisplayConfig.vm $
+     FilterDisplayConfig.vm is a Velocity template for use in code generation for the
+     .../merge/NSN/src/online/app/FilterDisplayConfig.xml file.
+-->
+<filter-display-configuration>
+  <context name="catalog">
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="6" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.BUSINESS_LINE</result-set-name>
+      <display-name>Business Line Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_06</update-table>
+      <sort-column>VWPRODUCT_LEAF.BUSINESS_LINE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="5" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.BUSINESS_LINE_CD</result-set-name>
+      <display-name>Business Line Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_02</update-table>
+      <sort-column>VWPRODUCT_LEAF.BUSINESS_LINE_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="8" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.BUSINESS_UNIT</result-set-name>
+      <display-name>Business Unit Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_05</update-table>
+      <sort-column>VWPRODUCT_LEAF.BUSINESS_UNIT</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="7" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.BUSINESS_UNIT_CD</result-set-name>
+      <display-name>Business Unit Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_01</update-table>
+      <sort-column>VWPRODUCT_LEAF.BUSINESS_UNIT_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="53" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CBT_DESCRIPTION</result-set-name>
+      <display-name>CBT_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_19</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CBT_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="52" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CBT_ID</result-set-name>
+      <display-name>CBT_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_18</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CBT_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="42" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CLUSTER</result-set-name>
+      <display-name>Cluster Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_05</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CLUSTER</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="41" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CLUSTER_CD</result-set-name>
+      <display-name>Cluster Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_01</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CLUSTER_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="46" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.COUNTRY_DESCRIPTION</result-set-name>
+      <display-name>Country_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_12</update-table>
+      <sort-column>VWCUSTOMER_LEAF.COUNTRY_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="45" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.COUNTRY_ID</result-set-name>
+      <display-name>Country_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_11</update-table>
+      <sort-column>VWCUSTOMER_LEAF.COUNTRY_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="38" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CUSTOMER_TEAM</result-set-name>
+      <display-name>Customer Team Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_08</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CUSTOMER_TEAM</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="37" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CUSTOMER_TEAM_CD</result-set-name>
+      <display-name>Customer Team Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_04</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CUSTOMER_TEAM_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="25" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.DPA_REPORTING_FLAG</result-set-name>
+      <display-name>DPA_Reporting_Flag</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_18</update-table>
+      <sort-column>VWPRODUCT_LEAF.DPA_REPORTING_FLAG</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="14" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.DSP_PRODUCT_FAMILY</result-set-name>
+      <display-name>DSP_Product_Family</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_13</update-table>
+      <sort-column>VWPRODUCT_LEAF.DSP_PRODUCT_FAMILY</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="15" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.DSP_PRODUCT_LINE</result-set-name>
+      <display-name>DSP_Product_Line</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_14</update-table>
+      <sort-column>VWPRODUCT_LEAF.DSP_PRODUCT_LINE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="19" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PHASE_IN_END_DATE</result-set-name>
+      <display-name>PHASE_IN_END_DATE</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_03</update-table>
+      <sort-column>VWPRODUCT_LEAF.PHASE_IN_END_DATE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="26" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.GIC</result-set-name>
+      <display-name>GIC</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_19</update-table>
+      <sort-column>VWPRODUCT_LEAF.GIC</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="51" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GLOBAL_CBT_DESCRIPTION</result-set-name>
+      <display-name>Global_CBT_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_17</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GLOBAL_CBT_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="50" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GLOBAL_CBT_ID</result-set-name>
+      <display-name>Global_CBT_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_16</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GLOBAL_CBT_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="44" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GLOBAL_DESCRIPTION</result-set-name>
+      <display-name>Global_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_10</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GLOBAL_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="43" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GLOBAL_ID</result-set-name>
+      <display-name>Global_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_09</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GLOBAL_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="36" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.DESCRIPTION</result-set-name>
+      <display-name>Group Key Desc</display-name>
+      <update-table>HIERARCHY_LEAF.DESCRIPTION</update-table>
+      <sort-column>VWCUSTOMER_LEAF.DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="35" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GROUP_KEY</result-set-name>
+      <display-name>Group Key Id</display-name>
+      <update-table>HIERARCHY_LEAF.LEAF_LABEL</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GROUP_KEY</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="33" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.IS_ACTIVE</result-set-name>
+      <display-name>Is_Active</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_26</update-table>
+      <sort-column>VWPRODUCT_LEAF.IS_ACTIVE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="56" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.IS_DISCONTINUE</result-set-name>
+      <display-name>Is_Discontinue</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_28</update-table>
+      <sort-column>VWPRODUCT_LEAF.IS_DISCONTINUE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="3" tab="1" position="55" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.KSI_CT_CT_PLAN_START_PERIOD</result-set-name>
+      <display-name>KSI_CT_CT_Plan_Start_Period</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_07</update-table>
+      <sort-column>VWPRODUCT_LEAF.KSI_CT_CT_PLAN_START_PERIOD</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="24" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.LAST_DELIVERY_DATE</result-set-name>
+      <display-name>Last_Delivery_Date</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_06</update-table>
+      <sort-column>VWPRODUCT_LEAF.LAST_DELIVERY_DATE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="23" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.LAST_ORDER_DATE</result-set-name>
+      <display-name>Last_Order_Date</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_05</update-table>
+      <sort-column>VWPRODUCT_LEAF.LAST_ORDER_DATE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="13" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.LEAD_KSI_FLAG</result-set-name>
+      <display-name>Lead_KSI_Flag</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_12</update-table>
+      <sort-column>VWPRODUCT_LEAF.LEAD_KSI_FLAG</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="27" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.MANAGEMENT_REPORTING_FLAG</result-set-name>
+      <display-name>Management_Reporting_Flag</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_20</update-table>
+      <sort-column>VWPRODUCT_LEAF.MANAGEMENT_REPORTING_FLAG</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="47" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.NSN_REGION</result-set-name>
+      <display-name>NSN_Region</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_13</update-table>
+      <sort-column>VWCUSTOMER_LEAF.NSN_REGION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="48" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.NSN_SUB_REGION</result-set-name>
+      <display-name>NSN_Sub_Region</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_14</update-table>
+      <sort-column>VWCUSTOMER_LEAF.NSN_SUB_REGION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="4" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.NET_ELEMENT_VERSION</result-set-name>
+      <display-name>Net Element Version Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_07</update-table>
+      <sort-column>VWPRODUCT_LEAF.NET_ELEMENT_VERSION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="3" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.NET_ELEMENT_VERSION_CD</result-set-name>
+      <display-name>Net Element Version Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_03</update-table>
+      <sort-column>VWPRODUCT_LEAF.NET_ELEMENT_VERSION_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="10" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.NET_ELEMENT_DESCRIPTION</result-set-name>
+      <display-name>Net_Element_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_09</update-table>
+      <sort-column>VWPRODUCT_LEAF.NET_ELEMENT_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="9" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.NET_ELEMENT_ID</result-set-name>
+      <display-name>Net_Element_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_08</update-table>
+      <sort-column>VWPRODUCT_LEAF.NET_ELEMENT_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="3" tab="1" position="20" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PHASE_OUT_END_DATE</result-set-name>
+      <display-name>PHASE_OUT_END_DATE</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_04</update-table>
+      <sort-column>VWPRODUCT_LEAF.PHASE_OUT_END_DATE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="17" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PHASE_IN_START_DATE</result-set-name>
+      <display-name>Phase_In_Start_Date</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_01</update-table>
+      <sort-column>VWPRODUCT_LEAF.PHASE_IN_START_DATE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="18" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PHASE_OUT_START_DATE</result-set-name>
+      <display-name>Phase_Out_Start_Date</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_02</update-table>
+      <sort-column>VWPRODUCT_LEAF.PHASE_OUT_START_DATE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="49" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.PLANNING_MODE_FLAG</result-set-name>
+      <display-name>Planning_Mode_Flag</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_15</update-table>
+      <sort-column>VWCUSTOMER_LEAF.PLANNING_MODE_FLAG</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="29" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PLANNING_STATUS</result-set-name>
+      <display-name>Planning_Status</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_22</update-table>
+      <sort-column>VWPRODUCT_LEAF.PLANNING_STATUS</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="30" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PLANNING_TYPE</result-set-name>
+      <display-name>Planning_Type</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_23</update-table>
+      <sort-column>VWPRODUCT_LEAF.PLANNING_TYPE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="28" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PORT_FACTOR</result-set-name>
+      <display-name>Port_Factor</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_21</update-table>
+      <sort-column>VWPRODUCT_LEAF.PORT_FACTOR</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="31" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PRODUCT_CATEGORY</result-set-name>
+      <display-name>Product_Category</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_24</update-table>
+      <sort-column>VWPRODUCT_LEAF.PRODUCT_CATEGORY</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="32" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PRODUCT_LIFECYCLE_STATE</result-set-name>
+      <display-name>Product_Lifecycle_State</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_25</update-table>
+      <sort-column>VWPRODUCT_LEAF.PRODUCT_LIFECYCLE_STATE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="40" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.REGION</result-set-name>
+      <display-name>Region Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_06</update-table>
+      <sort-column>VWCUSTOMER_LEAF.REGION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="39" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.REGION_CD</result-set-name>
+      <display-name>Region Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_02</update-table>
+      <sort-column>VWCUSTOMER_LEAF.REGION_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="21" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.REPLACED_BY</result-set-name>
+      <display-name>Replaced_By</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_16</update-table>
+      <sort-column>VWPRODUCT_LEAF.REPLACED_BY</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="16" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.SNP_RELEVANCE</result-set-name>
+      <display-name>SNP_Relevance</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_15</update-table>
+      <sort-column>VWPRODUCT_LEAF.SNP_RELEVANCE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="11" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.SW_PROD_TYPE</result-set-name>
+      <display-name>SW_Prod_Type</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_10</update-table>
+      <sort-column>VWPRODUCT_LEAF.SW_PROD_TYPE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="2" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.DESCRIPTION</result-set-name>
+      <display-name>Sales Item Desc</display-name>
+      <update-table>HIERARCHY_LEAF.DESCRIPTION</update-table>
+      <sort-column>VWPRODUCT_LEAF.DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="1" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.SALES_ITEM</result-set-name>
+      <display-name>Sales Item Id</display-name>
+      <update-table>HIERARCHY_LEAF.LEAF_LABEL</update-table>
+      <sort-column>VWPRODUCT_LEAF.SALES_ITEM</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="58" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.SUB_REGION</result-set-name>
+      <display-name>Sub_Region Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_07</update-table>
+      <sort-column>VWCUSTOMER_LEAF.SUB_REGION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="57" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.SUB_REGION_CD</result-set-name>
+      <display-name>Sub_Region Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_03</update-table>
+      <sort-column>VWCUSTOMER_LEAF.SUB_REGION_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="22" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.VERSION_FLAG</result-set-name>
+      <display-name>VERSION_FLAG</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_17</update-table>
+      <sort-column>VWPRODUCT_LEAF.VERSION_FLAG</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="34" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.UNIT_CLASS_ID</result-set-name>
+      <display-name>UNIT_CLASS_ID</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_04</update-table>
+      <sort-column>VWPRODUCT_LEAF.UNIT_CLASS_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="54" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.UNIT_CLASS_DESCRIPTION</result-set-name>
+      <display-name>Unit_Class_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_27</update-table>
+      <sort-column>VWPRODUCT_LEAF.UNIT_CLASS_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="12" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.UNIT_OF_MEASURE</result-set-name>
+      <display-name>Unit_Of_Measure</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_11</update-table>
+      <sort-column>VWPRODUCT_LEAF.UNIT_OF_MEASURE</sort-column>
+    </column>
+  </context>
+  <context name="forecast">
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="25" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.BUSINESS_LINE</result-set-name>
+      <display-name>Business Line Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_06</update-table>
+      <sort-column>VWPRODUCT_LEAF.BUSINESS_LINE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="24" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.BUSINESS_LINE_CD</result-set-name>
+      <display-name>Business Line Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_02</update-table>
+      <sort-column>VWPRODUCT_LEAF.BUSINESS_LINE_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="27" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.BUSINESS_UNIT</result-set-name>
+      <display-name>Business Unit Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_05</update-table>
+      <sort-column>VWPRODUCT_LEAF.BUSINESS_UNIT</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="26" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.BUSINESS_UNIT_CD</result-set-name>
+      <display-name>Business Unit Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_01</update-table>
+      <sort-column>VWPRODUCT_LEAF.BUSINESS_UNIT_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="19" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CBT_DESCRIPTION</result-set-name>
+      <display-name>CBT_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_19</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CBT_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="18" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CBT_ID</result-set-name>
+      <display-name>CBT_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_18</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CBT_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="8" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CLUSTER</result-set-name>
+      <display-name>Cluster Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_05</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CLUSTER</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="7" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CLUSTER_CD</result-set-name>
+      <display-name>Cluster Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_01</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CLUSTER_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="12" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.COUNTRY_DESCRIPTION</result-set-name>
+      <display-name>Country_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_12</update-table>
+      <sort-column>VWCUSTOMER_LEAF.COUNTRY_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="11" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.COUNTRY_ID</result-set-name>
+      <display-name>Country_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_11</update-table>
+      <sort-column>VWCUSTOMER_LEAF.COUNTRY_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="4" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CUSTOMER_TEAM</result-set-name>
+      <display-name>Customer Team Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_08</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CUSTOMER_TEAM</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="3" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.CUSTOMER_TEAM_CD</result-set-name>
+      <display-name>Customer Team Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_04</update-table>
+      <sort-column>VWCUSTOMER_LEAF.CUSTOMER_TEAM_CD</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="44" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.DPA_REPORTING_FLAG</result-set-name>
+      <display-name>DPA_Reporting_Flag</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_18</update-table>
+      <sort-column>VWPRODUCT_LEAF.DPA_REPORTING_FLAG</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="2" tab="1" position="33" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.DSP_PRODUCT_FAMILY</result-set-name>
+      <display-name>DSP_Product_Family</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_13</update-table>
+      <sort-column>VWPRODUCT_LEAF.DSP_PRODUCT_FAMILY</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="2" tab="1" position="34" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.DSP_PRODUCT_LINE</result-set-name>
+      <display-name>DSP_Product_Line</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_14</update-table>
+      <sort-column>VWPRODUCT_LEAF.DSP_PRODUCT_LINE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="38" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PHASE_IN_END_DATE</result-set-name>
+      <display-name>PHASE_IN_END_DATE</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_03</update-table>
+      <sort-column>VWPRODUCT_LEAF.PHASE_IN_END_DATE</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="45" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.GIC</result-set-name>
+      <display-name>GIC</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_19</update-table>
+      <sort-column>VWPRODUCT_LEAF.GIC</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="17" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GLOBAL_CBT_DESCRIPTION</result-set-name>
+      <display-name>Global_CBT_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_17</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GLOBAL_CBT_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="16" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GLOBAL_CBT_ID</result-set-name>
+      <display-name>Global_CBT_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_16</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GLOBAL_CBT_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="10" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GLOBAL_DESCRIPTION</result-set-name>
+      <display-name>Global_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_10</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GLOBAL_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="9" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GLOBAL_ID</result-set-name>
+      <display-name>Global_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_09</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GLOBAL_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="2" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.DESCRIPTION</result-set-name>
+      <display-name>Group Key Desc</display-name>
+      <update-table>HIERARCHY_LEAF.DESCRIPTION</update-table>
+      <sort-column>VWCUSTOMER_LEAF.DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="1" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.GROUP_KEY</result-set-name>
+      <display-name>Group Key Id</display-name>
+      <update-table>HIERARCHY_LEAF.LEAF_LABEL</update-table>
+      <sort-column>VWCUSTOMER_LEAF.GROUP_KEY</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="52" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.IS_ACTIVE</result-set-name>
+      <display-name>Is_Active</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_26</update-table>
+      <sort-column>VWPRODUCT_LEAF.IS_ACTIVE</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="59" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.IS_DISCONTINUE</result-set-name>
+      <display-name>Is_Discontinue</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_28</update-table>
+      <sort-column>VWPRODUCT_LEAF.IS_DISCONTINUE</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="3" tab="1" position="58" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.KSI_CT_CT_PLAN_START_PERIOD</result-set-name>
+      <display-name>KSI_CT_CT_Plan_Start_Period</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_07</update-table>
+      <sort-column>VWPRODUCT_LEAF.KSI_CT_CT_PLAN_START_PERIOD</sort-column>
+    </column>
+    <column sortable="true" searchable="false" side="right" type="1" tab="1" position="55" hierarchy-type="notApplicable">
+      <result-set-name>L3MO</result-set-name>
+      <display-name>L3MO</display-name>
+      <update-table>METRICS.L3MO</update-table>
+      <sort-column>METRICS.L3MO</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="43" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.LAST_DELIVERY_DATE</result-set-name>
+      <display-name>Last_Delivery_Date</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_06</update-table>
+      <sort-column>VWPRODUCT_LEAF.LAST_DELIVERY_DATE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="42" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.LAST_ORDER_DATE</result-set-name>
+      <display-name>Last_Order_Date</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_05</update-table>
+      <sort-column>VWPRODUCT_LEAF.LAST_ORDER_DATE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="2" tab="1" position="32" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.LEAD_KSI_FLAG</result-set-name>
+      <display-name>Lead_KSI_Flag</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_12</update-table>
+      <sort-column>VWPRODUCT_LEAF.LEAD_KSI_FLAG</sort-column>
+    </column>
+    <column sortable="true" searchable="false" side="right" type="1" tab="1" position="54" hierarchy-type="notApplicable">
+      <result-set-name>AGGREGATED_NPERIODS_MAPE</result-set-name>
+      <display-name>MAPE</display-name>
+      <update-table>MAPE3.AGGREGATED_NPERIODS_MAPE</update-table>
+      <sort-column>MAPE3.AGGREGATED_NPERIODS_MAPE</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="46" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.MANAGEMENT_REPORTING_FLAG</result-set-name>
+      <display-name>Management_Reporting_Flag</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_20</update-table>
+      <sort-column>VWPRODUCT_LEAF.MANAGEMENT_REPORTING_FLAG</sort-column>
+    </column>
+    <column sortable="true" searchable="false" side="right" type="1" tab="1" position="56" hierarchy-type="notApplicable">
+      <result-set-name>N3MO</result-set-name>
+      <display-name>N3MO</display-name>
+      <update-table>METRICS.N3MO</update-table>
+      <sort-column>METRICS.N3MO</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="13" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.NSN_REGION</result-set-name>
+      <display-name>NSN_Region</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_13</update-table>
+      <sort-column>VWCUSTOMER_LEAF.NSN_REGION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="14" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.NSN_SUB_REGION</result-set-name>
+      <display-name>NSN_Sub_Region</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_14</update-table>
+      <sort-column>VWCUSTOMER_LEAF.NSN_SUB_REGION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="23" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.NET_ELEMENT_VERSION</result-set-name>
+      <display-name>Net Element Version Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_07</update-table>
+      <sort-column>VWPRODUCT_LEAF.NET_ELEMENT_VERSION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="22" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.NET_ELEMENT_VERSION_CD</result-set-name>
+      <display-name>Net Element Version Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_03</update-table>
+      <sort-column>VWPRODUCT_LEAF.NET_ELEMENT_VERSION_CD</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="29" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.NET_ELEMENT_DESCRIPTION</result-set-name>
+      <display-name>Net_Element_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_09</update-table>
+      <sort-column>VWPRODUCT_LEAF.NET_ELEMENT_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="28" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.NET_ELEMENT_ID</result-set-name>
+      <display-name>Net_Element_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_08</update-table>
+      <sort-column>VWPRODUCT_LEAF.NET_ELEMENT_ID</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="39" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PHASE_OUT_END_DATE</result-set-name>
+      <display-name>PHASE_OUT_END_DATE</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_04</update-table>
+      <sort-column>VWPRODUCT_LEAF.PHASE_OUT_END_DATE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="36" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PHASE_IN_START_DATE</result-set-name>
+      <display-name>Phase_In_Start_Date</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_01</update-table>
+      <sort-column>VWPRODUCT_LEAF.PHASE_IN_START_DATE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="3" tab="1" position="37" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PHASE_OUT_START_DATE</result-set-name>
+      <display-name>Phase_Out_Start_Date</display-name>
+      <update-table>HIERARCHY_LEAF.DATE_02</update-table>
+      <sort-column>VWPRODUCT_LEAF.PHASE_OUT_START_DATE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="15" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.PLANNING_MODE_FLAG</result-set-name>
+      <display-name>Planning_Mode_Flag</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_15</update-table>
+      <sort-column>VWCUSTOMER_LEAF.PLANNING_MODE_FLAG</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="48" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PLANNING_STATUS</result-set-name>
+      <display-name>Planning_Status</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_22</update-table>
+      <sort-column>VWPRODUCT_LEAF.PLANNING_STATUS</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="49" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PLANNING_TYPE</result-set-name>
+      <display-name>Planning_Type</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_23</update-table>
+      <sort-column>VWPRODUCT_LEAF.PLANNING_TYPE</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="47" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PORT_FACTOR</result-set-name>
+      <display-name>Port_Factor</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_21</update-table>
+      <sort-column>VWPRODUCT_LEAF.PORT_FACTOR</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="50" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PRODUCT_CATEGORY</result-set-name>
+      <display-name>Product_Category</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_24</update-table>
+      <sort-column>VWPRODUCT_LEAF.PRODUCT_CATEGORY</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="51" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.PRODUCT_LIFECYCLE_STATE</result-set-name>
+      <display-name>Product_Lifecycle_State</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_25</update-table>
+      <sort-column>VWPRODUCT_LEAF.PRODUCT_LIFECYCLE_STATE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="6" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.REGION</result-set-name>
+      <display-name>Region Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_06</update-table>
+      <sort-column>VWCUSTOMER_LEAF.REGION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="5" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.REGION_CD</result-set-name>
+      <display-name>Region Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_02</update-table>
+      <sort-column>VWCUSTOMER_LEAF.REGION_CD</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="40" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.REPLACED_BY</result-set-name>
+      <display-name>Replaced_By</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_16</update-table>
+      <sort-column>VWPRODUCT_LEAF.REPLACED_BY</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="2" tab="1" position="35" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.SNP_RELEVANCE</result-set-name>
+      <display-name>SNP_Relevance</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_15</update-table>
+      <sort-column>VWPRODUCT_LEAF.SNP_RELEVANCE</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="2" tab="1" position="30" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.SW_PROD_TYPE</result-set-name>
+      <display-name>SW_Prod_Type</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_10</update-table>
+      <sort-column>VWPRODUCT_LEAF.SW_PROD_TYPE</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="21" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.DESCRIPTION</result-set-name>
+      <display-name>Sales Item Desc</display-name>
+      <update-table>HIERARCHY_LEAF.DESCRIPTION</update-table>
+      <sort-column>VWPRODUCT_LEAF.DESCRIPTION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="20" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.SALES_ITEM</result-set-name>
+      <display-name>Sales Item Id</display-name>
+      <update-table>HIERARCHY_LEAF.LEAF_LABEL</update-table>
+      <sort-column>VWPRODUCT_LEAF.SALES_ITEM</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="61" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.SUB_REGION</result-set-name>
+      <display-name>Sub_Region Desc</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_07</update-table>
+      <sort-column>VWCUSTOMER_LEAF.SUB_REGION</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="60" hierarchy-type="customer">
+      <result-set-name>VWCUSTOMER_LEAF.SUB_REGION_CD</result-set-name>
+      <display-name>Sub_Region Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_03</update-table>
+      <sort-column>VWCUSTOMER_LEAF.SUB_REGION_CD</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="41" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.VERSION_FLAG</result-set-name>
+      <display-name>VERSION_FLAG</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_17</update-table>
+      <sort-column>VWPRODUCT_LEAF.VERSION_FLAG</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="53" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.UNIT_CLASS_ID</result-set-name>
+      <display-name>UNIT_CLASS_ID</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_04</update-table>
+      <sort-column>VWPRODUCT_LEAF.UNIT_CLASS_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="57" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.UNIT_CLASS_DESCRIPTION</result-set-name>
+      <display-name>Unit_Class_Description</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_27</update-table>
+      <sort-column>VWPRODUCT_LEAF.UNIT_CLASS_DESCRIPTION</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="2" tab="1" position="31" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.UNIT_OF_MEASURE</result-set-name>
+      <display-name>Unit_Of_Measure</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_11</update-table>
+      <sort-column>VWPRODUCT_LEAF.UNIT_OF_MEASURE</sort-column>
+    </column>
+    <column sortable="false" searchable="true" side="right" type="2" tab="1" position="62" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.ALM_PCU_ID</result-set-name>
+      <display-name>Alm_Pcu_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_30</update-table>
+      <sort-column>VWPRODUCT_LEAF.ALM_PCU_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="63" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.WBS_CONTRACT_ID</result-set-name>
+      <display-name>Wbs_Contract_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_31</update-table>
+      <sort-column>VWPRODUCT_LEAF.WBS_CONTRACT_ID</sort-column>
+    </column>
+    <column sortable="true" searchable="true" side="right" type="2" tab="1" position="64" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.RISK_CATEGORY</result-set-name>
+      <display-name>Risk_Category</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_32</update-table>
+      <sort-column>VWPRODUCT_LEAF.RISK_CATEGORY</sort-column>
+    </column>
+    <column sortable="false" searchable="false" side="right" type="2" tab="1" position="65" hierarchy-type="product/ITEM">
+      <result-set-name>VWPRODUCT_LEAF.SWF_ID</result-set-name>
+      <display-name>Swf_Id</display-name>
+      <update-table>HIERARCHY_LEAF.STRING_LONG_33</update-table>
+      <sort-column>VWPRODUCT_LEAF.SWF_ID</sort-column>
+    </column>    
+  </context>
+</filter-display-configuration>
+
+

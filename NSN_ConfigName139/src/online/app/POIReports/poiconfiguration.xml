@@ -1,0 +1,90 @@
+
+<Reports>
+
+    
+
+	 <Report>
+        <ReportName>CT DP FC Report</ReportName>
+		<FileExtn>xlsx</FileExtn>
+        <CreateNew>true</CreateNew>
+        <TemplateFile>applications\steelwedge\app\POIReports\BaseTemplate\CT_DP_FC_Report.xlsx</TemplateFile>
+		<HandlerClassName>com.steelwedge.poi.GenericReportHandler</HandlerClassName>				
+        <GeneratedFile>applications\steelwedge\app\POIReports\generated\CT DP FC Report\</GeneratedFile>
+        <WorkSheets>
+        
+        <WorkSheet>
+
+			<SheetName>Raw_Data_Sheet</SheetName>
+			<Headers>NA</Headers>
+			<CreateNew>false</CreateNew>
+			<SetFunctionUsed>false</SetFunctionUsed>
+			<PreserveRowNum>true</PreserveRowNum>
+			<PreExecuteCnt>0</PreExecuteCnt>
+			<PostExecuteCnt>0</PostExecuteCnt>
+			<PaginatedQuery>false</PaginatedQuery>
+			<ApplySecTkn>true</ApplySecTkn>
+			<ApplyFilTkn>false</ApplyFilTkn>
+			<RightOffset>1</RightOffset>
+			<IsHeadersReq>NO</IsHeadersReq>
+			<RefreshSheet>true</RefreshSheet>
+
+			<Query>
+			<!-- 
+			
+select  distinct TB.BUSINESS_NAME AS TIMESERIES,
+      dm.STRING_LONG_11 AS CUSTOMER_CASE_ID,
+                  dm.STRING_LONG_13 AS OFFER_ID,
+                  dm.HC1_HA_PK AS PCU_ID,
+                  dm.STRING_LONG_01 AS PCU_DESCRIPTION,
+                  dm.STRING_LONG_09 AS ALM_PCU_ID,
+                  dm.HC2_HA_PK AS GROUP_KEY_ID,
+                  dm.STRING_LONG_02 AS GROUP_KEY_DESCRIPTION,
+                  dm.STRING_LONG_03 AS SWF_ID,
+                  dm.STRING_LONG_04 AS GATE,
+                  dm.STRING_LONG_05 AS WBS_CONTRACT_ID,
+                  dm.STRING_LONG_07 As RISK_CATEGORY,
+                  dm.STRING_LONG_08 AS REGION_IN_OUT,
+                  TUO.NOTES as NOTES,
+                  p.EDS_DT as START_DT,
+                  fddb.VALUE as VALUE
+from forecast_detail_data_B fddb 
+join  CATALOG_DETAIL cd on fddb.detail_id = cd.detail_ID
+join period p on fddb.EFFECTIVE_PERIOD_ID = P.PERIOD_ID
+join VWPRODUCT_LEAF on VWPRODUCT_LEAF.ITEM_ID=cd.HC1_LEAF_ID
+join VWCUSTOMER_LEAF on VWCUSTOMER_LEAF.ITEM_ID=cd.HC2_LEAF_ID
+join demand dm on fddb.DETAIL_ID=dm.DETAIL_ID
+join TS_BUSINESS_NAME TB on TB.TYPE_ID = fddb.TYPE_ID
+     and TB.PERSPECTIVE_ID = fddb.PERSPECTIVE_ID
+left join TRANSACTION_USER_OVERRIDE TUO on
+      TUO.TR_USER_OVERRIDE_ID = (select max(TR_USER_OVERRIDE_ID) 
+                                                from TRANSACTION_USER_OVERRIDE where ORDER_ID = dm.ORDER_ID)
+            
+where dm.TYPE_ID=20019
+   and cd.is_discontinued <> 1
+   and fddb.EFFECTIVE_PERIOD_ID between (select IMPORT_PERIOD_ID from forecast_plan) 
+            and (select IMPORT_PERIOD_ID+12 from forecast_plan)   
+   and ((fddb.TYPE_ID = 109 and fddb.PERSPECTIVE_ID = 120)
+            or (fddb.TYPE_ID = 136 and fddb.PERSPECTIVE_ID = 121)
+            or (fddb.TYPE_ID = 109 and fddb.PERSPECTIVE_ID = 164)
+            or (fddb.TYPE_ID = 136 and fddb.PERSPECTIVE_ID = 128)) 
+			and <##ApplySecTkn##>            
+
+
+    
+
+			
+			-->
+			
+			</Query>
+
+						
+			</WorkSheet>
+    
+        </WorkSheets>
+    
+    
+    </Report>
+    
+
+    
+</Reports>

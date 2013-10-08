@@ -1,0 +1,259 @@
+
+<!--xsl:apply-templates select="Column"/-->
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.NET_ELEMENT_VERSION_CD'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.NET_ELEMENT_VERSION_CD']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.NET_ELEMENT_VERSION'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.NET_ELEMENT_VERSION']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.BUSINESS_LINE_CD'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.BUSINESS_LINE_CD']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.BUSINESS_LINE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.BUSINESS_LINE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.BUSINESS_UNIT_CD'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.BUSINESS_UNIT_CD']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.BUSINESS_UNIT'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.BUSINESS_UNIT']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.NET_ELEMENT_ID'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.NET_ELEMENT_ID']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.NET_ELEMENT_DESCRIPTION'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.NET_ELEMENT_DESCRIPTION']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.UNIT_OF_MEASURE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.UNIT_OF_MEASURE']"/>
+        </xsl:if>
+    </td>
+	
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.LEAD_KSI_FLAG'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.LEAD_KSI_FLAG']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.DSP_PRODUCT_FAMILY'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.DSP_PRODUCT_FAMILY']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.DSP_PRODUCT_LINE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.DSP_PRODUCT_LINE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.SNP_RELEVANCE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.SNP_RELEVANCE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.PHASE_IN_START_DATE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.PHASE_IN_START_DATE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.PHASE_OUT_START_DATE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.PHASE_OUT_START_DATE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.FREE_SALES_START_DATE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.FREE_SALES_START_DATE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.PIPO_ACTIVITY_SCHEDULED'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.PIPO_ACTIVITY_SCHEDULED']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.REPLACED_BY'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.REPLACED_BY']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.TO_REPLACE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.TO_REPLACE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.LAST_ORDER_DATE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.LAST_ORDER_DATE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.LAST_DELIVERY_DATE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.LAST_DELIVERY_DATE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.DPA_REPORTING_FLAG'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.DPA_REPORTING_FLAG']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.GIC'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.GIC']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.MANAGEMENT_REPORTING_FLAG'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.MANAGEMENT_REPORTING_FLAG']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.PORT_FACTOR'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.PORT_FACTOR']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.PLANNING_STATUS'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.PLANNING_STATUS']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.SW_PROD_TYPE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.SW_PROD_TYPE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.PLANNING_TYPE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.PLANNING_TYPE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.PRODUCT_CATEGORY'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.PRODUCT_CATEGORY']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.PRODUCT_LIFECYCLE_STATE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.PRODUCT_LIFECYCLE_STATE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.IS_ACTIVE'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.IS_ACTIVE']"/>
+        </xsl:if>
+    </td>
+    <td align="left" style="cursor: default">
+        <xsl:if test="current()/Column/@name='VWPRODUCT_LEAF.UNIT_CLASS_ID'">
+            <xsl:attribute name="class">normaltext</xsl:attribute>
+            <xsl:attribute name="style">PADDING-RIGHT: 10px</xsl:attribute>
+            <xsl:attribute name="nowrap">nowrap</xsl:attribute>
+            <xsl:value-of select="Column[@name='VWPRODUCT_LEAF.UNIT_CLASS_ID']"/>
+        </xsl:if>
+    </td>

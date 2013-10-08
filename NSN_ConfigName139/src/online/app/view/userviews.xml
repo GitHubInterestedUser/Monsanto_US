@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Liquid XML Studio Developer Edition (Trial) 9.1.1.3301 (http://www.liquid-technologies.com) -->
+<TransactionTypeViews xmlns="http://www.transactionmanager.steelwedge.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.transactionmanager.steelwedge.com E:\CompiledClass\UserViews.xsd">
+ <TransactionTypeElement>
+  <Userview>
+    <ViewName>Opportunity view</ViewName>
+    <headerelements>
+      <HeaderElement>
+        <HeaderDisplayName>Swf Id</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_01</MappingName>
+        <position>1</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Net Element Version Id</HeaderDisplayName>
+        <MappingName>VWPRODUCT_LEAF.NET_ELEMENT_VERSION_CD</MappingName>
+        <position>2</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Group Key Id</HeaderDisplayName>
+        <MappingName>DEMAND.HC2_HA_PK</MappingName>
+        <position>3</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Group Key Description</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_02</MappingName>
+        <position>4</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Swf Last Change Date</HeaderDisplayName>
+        <MappingName>DEMAND.DATE_01</MappingName>
+        <position>15</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Risk Category</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_06</MappingName>
+        <position>16</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Region In Out</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_07</MappingName>
+        <position>17</position>
+      </HeaderElement>
+    </headerelements>
+  </Userview>
+  <TransactionName>Opportunity_View</TransactionName>
+</TransactionTypeElement>
+
+
+<TransactionTypeElement>
+  <Userview>
+    <ViewName>Configuration view</ViewName>
+    <headerelements>
+      <HeaderElement>
+        <HeaderDisplayName>Pcu Id</HeaderDisplayName>
+        <MappingName>DEMAND.HC1_HA_PK</MappingName>
+        <position>1</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Pcu Description</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_01</MappingName>
+        <position>2</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Group Key Id</HeaderDisplayName>
+        <MappingName>DEMAND.HC2_HA_PK</MappingName>
+        <position>3</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Group Key Description</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_02</MappingName>
+        <position>4</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Swf Id</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_03</MappingName>
+        <position>5</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Csp Last Change Date</HeaderDisplayName>
+        <MappingName>DEMAND.DATE_01</MappingName>
+        <position>13</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Risk Category</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_07</MappingName>
+        <position>14</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Region In Out</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_08</MappingName>
+        <position>15</position>
+      </HeaderElement>
+      <HeaderElement>
+        <HeaderDisplayName>Alm Pcu Id</HeaderDisplayName>
+        <MappingName>DEMAND.STRING_LONG_09</MappingName>
+        <position>16</position>
+      </HeaderElement>
+    </headerelements>
+  </Userview>
+  <TransactionName>Configuration_View</TransactionName>
+</TransactionTypeElement>
+
+
+</TransactionTypeViews>
