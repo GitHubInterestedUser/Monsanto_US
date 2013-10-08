@@ -1,0 +1,1589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: ReportConfig.vm 28547 2007-10-10 16:01:00Z pkoivula $
+     $HeadURL: http://steelsvn/312_repo/trunk/build/efmcore/src/online/app/ReportConfig.vm $
+     ReportConfig.vm is a Velocity template for use in code generation for the
+     .../merge/$client/src/online/app/ReportConfig.xml file.
+-->
+<criterias>
+<!-- Static portion -->
+
+   <criteria table="VWPRODUCT_LEAF" column="IS_DISCONTINUED">
+      <displayName>Discontinued</displayName>
+      <dataType>NUMERIC</dataType>
+      <numberFormat>0</numberFormat>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="VWPRODUCT_LEAF" column="IS_TEMPORARY">
+      <displayName>Temporary</displayName>
+      <dataType>NUMERIC</dataType>
+      <numberFormat>0</numberFormat>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="PERIOD" column="END_DT">
+      <displayName>End Date</displayName>
+      <dataType>DATE</dataType>
+      <operators>
+       <operator>BETWEEN</operator>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+          <tablecolumn>PERIOD.END_DT</tablecolumn>
+      </lookup>
+   </criteria>
+   <criteria table="PERIOD" column="BIZ_YEAR">
+      <displayName>Business Year</displayName>
+      <dataType>NUMERIC</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+
+
+   <criteria table="TS_TYPE" column="DESCRIPTION">
+      <displayName>Time Series Desc</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="TS_TYPE" column="CONTEXT">
+      <displayName>Time Series Type</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="PERSPECTIVE" column="DESCRIPTION">
+      <displayName>Perspective</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="PERIOD" column="START_DT">
+      <displayName>Period</displayName>
+      <dataType>DATE</dataType>
+      <operators>
+       <operator>BETWEEN</operator>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+          <tablecolumn>PERIOD.START_DT</tablecolumn>
+      </lookup>
+   </criteria>
+   <criteria table="ASOFPERIOD" column="START_DT">
+      <displayName>As of Period</displayName>
+      <dataType>DATE</dataType>
+      <operators>
+       <operator>EQUALS</operator>
+       <operator>BETWEEN</operator>
+       <operator>IN</operator>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+          <tablecolumn>VWASOFPERIOD.START_DT</tablecolumn>
+      </lookup>
+   </criteria>
+   <criteria table="ASOFPERIOD_FOCMET" column="START_DT">
+      <displayName>As of Period</displayName>
+      <dataType>DATE</dataType>
+      <operators>
+       <operator>EQUALS</operator>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+          <tablecolumn>VWASOFPERIOD.START_DT</tablecolumn>
+      </lookup>
+   </criteria>
+   <criteria table="ASOFPERIOD_PERIODIC" column="START_DT">
+      <displayName>As of Period</displayName>
+      <dataType>DATE</dataType>
+      <operators>
+       <operator>EQUALS</operator>
+       <operator>BETWEEN</operator>
+       <operator>IN</operator>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+          <tablecolumn>vwasofperiod_periodic.EFFECTIVE_DT</tablecolumn>
+      </lookup>
+   </criteria>
+   <criteria table="TS_TYPE" column="DESCRIPTION">
+      <displayName>Time Series Desc</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="TS_TYPE" column="ASPECT">
+      <displayName>Time Series Code</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="TS_TYPE" column="CONTEXT">
+      <displayName>Time Series Type</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="VWTS_FORECAST" column="DESCRIPTION">
+      <displayName>Time Series Desc</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="VWTS_FORECAST" column="CONTEXT">
+      <displayName>Time Series Type</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="VWTS_TRANSACTION" column="DESCRIPTION">
+      <displayName>Time Series Desc</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="VWTS_TRANSACTION" column="ASPECT">
+      <displayName>Time Series Code</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="VWTS_TRANSACTION" column="CONTEXT">
+      <displayName>Time Series Type</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="AUDIT_FORECAST" column="LOCAL_EFFECTIVE_DT">
+      <displayName>Date Changed</displayName>
+      <dataType>DATE</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="FND1" column="VALUE">
+      <displayName>Reason</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>Yes</permitted>
+          <tablecolumn>$$STATICLOOKUP.Reason</tablecolumn>
+      </lookup>
+   </criteria>
+   <criteria table="FND2" column="VALUE">
+      <displayName>Confidence</displayName>
+      <dataType>NUMERIC</dataType>
+      <numberFormat>0</numberFormat>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+          <tablecolumn>$$STATICLOOKUP.Confidence</tablecolumn>
+      </lookup>
+   </criteria>
+   <criteria table="EFM_AUDIT" column="UID_PK">
+      <displayName>Changed By</displayName>
+      <dataType>STRING</dataType>
+      <numberFormat>0</numberFormat>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="EFM_AUDIT" column="EFFECTIVE_DT">
+      <displayName>Date Changed</displayName>
+      <dataType>DATE</dataType>
+      <numberFormat>0</numberFormat>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="DETAIL_DATA" column="VALUE">
+      <displayName>Amount</displayName>
+      <dataType>NUMERIC</dataType>
+      <numberFormat>#.##</numberFormat>
+      <operators>
+        <!--   <operator>IS_NOT_NULL</operator>
+           <operator>IS_NULL</operator> -->
+             <operator>NOT_EQUALS</operator>
+        <!--   <operator>EQUALS</operator>
+            <operator>LESS_THAN</operator>
+           <operator>LESS_THAN_EQUAL</operator>
+          <operator>GREATER_THAN</operator>
+           <operator>GREATER_THAN_EQUAL</operator> -->
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="FDHC" column="VALUE">
+      <displayName>Amount</displayName>
+      <dataType>NUMERIC</dataType>
+      <numberFormat>#.##</numberFormat>
+      <operators>
+           <operator>IS_NOT_NULL</operator>
+           <operator>IS_NULL</operator>
+           <operator>NOT_EQUALS</operator>
+           <operator>EQUALS</operator>
+           <operator>LESS_THAN</operator>
+           <operator>LESS_THAN_EQUAL</operator>
+           <operator>GREATER_THAN</operator>
+           <operator>GREATER_THAN_EQUAL</operator>
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="FDHP" column="VALUE">
+      <displayName>Amount</displayName>
+      <dataType>NUMERIC</dataType>
+      <numberFormat>#.##</numberFormat>
+      <operators>
+           <operator>IS_NOT_NULL</operator>
+           <operator>IS_NULL</operator>
+           <operator>NOT_EQUALS</operator>
+           <operator>EQUALS</operator>
+           <operator>LESS_THAN</operator>
+           <operator>LESS_THAN_EQUAL</operator>
+           <operator>GREATER_THAN</operator>
+           <operator>GREATER_THAN_EQUAL</operator>
+      </operators>
+      <lookup>
+          <permitted>no</permitted>
+      </lookup>
+   </criteria>
+   <criteria table="BCP" column="CALENDAR_NAME">
+      <displayName>Business Calendar</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+       <operator>EQUALS</operator>
+       <operator>IN</operator>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+          <tablecolumn>BUSINESS_CALENDAR_PERIOD.CALENDAR_NAME</tablecolumn>
+      </lookup>
+   </criteria>
+   <criteria table="VWPRODUCT_LEAF" column="ASSEMBLY_TYPE_CD">
+      <displayName>SW Product Type</displayName>
+      <dataType>STRING</dataType>
+      <operators>
+      </operators>
+      <lookup>
+          <permitted>yes</permitted>
+      </lookup>
+   </criteria>
+      <criteria table="PERIOD" column="BIZ_YEAR">
+         <displayName>Effective Year</displayName>
+         <dataType>STRING</dataType>
+         <operators>
+   	    <operator>EQUALS</operator>
+   	    <operator>IN</operator>
+   	    <operator>NOT_EQUALS</operator>
+         </operators>
+         <lookup>
+             <permitted>yes</permitted>
+             <tablecolumn>PERIOD.BIZ_YEAR</tablecolumn>
+         </lookup>
+      </criteria>
+      <criteria table="ASOFPERIOD" column="BIZ_YEAR">
+         <displayName>As Of Year</displayName>
+         <dataType>STRING</dataType>
+         <operators>
+   	    <operator>EQUALS</operator>
+   	    <operator>IN</operator>
+   	    <operator>NOT_EQUALS</operator>
+         </operators>
+         <lookup>
+             <permitted>yes</permitted>
+             <tablecolumn>VWASOFPERIODYEAR.BIZ_YEAR</tablecolumn>
+         </lookup>
+      </criteria>
+	  <criteria table="EXCEL_LIBRARY_META" column="BUSINESS_NAME">
+        <displayName>Time Series Desc</displayName>
+        <dataType>STRING</dataType>
+        <operators />
+        <lookup>
+          <permitted>yes</permitted>
+        </lookup>
+      </criteria>
+      <criteria table="VWRPT_TIMESERIES_INDEP" column="TIMESERIES_DESC">
+        <displayName>Time Series Desc</displayName>
+        <dataType>STRING</dataType>
+        <operators />
+        <lookup>
+          <permitted>yes</permitted>
+        </lookup>
+      </criteria>
+      <criteria table="VWTIMESERIES" column="TIMESERIES_DESC">
+        <displayName>Time Series Desc</displayName>
+        <dataType>STRING</dataType>
+        <operators />
+        <lookup>
+          <permitted>yes</permitted>
+        </lookup>
+      </criteria>
+      <criteria table="VWTIMESERIES_RPT" column="TIMESERIES_DESC">
+        <displayName>Time Series Desc</displayName>
+        <dataType>STRING</dataType>
+        <operators />
+        <lookup>
+          <permitted>yes</permitted>
+        </lookup>
+	</criteria>
+<!-- Dynamic portion -->
+<criteria table="VWPRODUCT_LEAF" column="FORECASTING_UNIT">
+  <displayName>FORECASTING_UNIT Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="DESCRIPTION">
+  <displayName>FORECASTING_UNIT Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="HYBRID_VARIETY_CD">
+  <displayName>HYBRID_VARIETY Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="HYBRID_VARIETY">
+  <displayName>HYBRID_VARIETY Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="CROP_CD">
+  <displayName>CROP Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="CROP">
+  <displayName>CROP Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="BRAND_FAMILY_CD">
+  <displayName>BRAND_FAMILY</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="BRAND_CD">
+  <displayName>BRAND</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="GERMPLASM_CD">
+  <displayName>GERMPLASM</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="PACKAGE_SIZE_CD">
+  <displayName>PACKAGE_SIZE</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="ORG_L4">
+  <displayName>ORG_L4 Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="DESCRIPTION">
+  <displayName>ORG_L4 Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="ORG_L3_CD">
+  <displayName>ORG_L3 Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="ORG_L3">
+  <displayName>ORG_L3 Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="ORG_L2_CD">
+  <displayName>ORG_L2 Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="ORG_L2">
+  <displayName>ORG_L2 Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="ORG_L1_CD">
+  <displayName>ORG_L1 Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="ORG_L1">
+  <displayName>ORG_L1 Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="CUSTOMER">
+  <displayName>CUSTOMER Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="DESCRIPTION">
+  <displayName>CUSTOMER Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="COUNTRY_CD">
+  <displayName>COUNTRY Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="COUNTRY">
+  <displayName>COUNTRY Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="GROUP_OF_COUNTRIES_CD">
+  <displayName>GROUP_OF_COUNTRIES Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="GROUP_OF_COUNTRIES">
+  <displayName>GROUP_OF_COUNTRIES Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="WORLD_REGION_CD">
+  <displayName>WORLD_REGION Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="WORLD_REGION">
+  <displayName>WORLD_REGION Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="ALT_GROUP_OF_COUNTRIES_CD">
+  <displayName>ALT_GROUP_OF_COUNTRIES</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="FIELD_SALES_REP_CD">
+  <displayName>FIELD_SALES_REP</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="CUSTOMER_GROUP_CD">
+  <displayName>CUSTOMER_GROUP</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="SUPPLY_PLANT_SLOC">
+  <displayName>SUPPLY_PLANT_SLOC Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="DESCRIPTION">
+  <displayName>SUPPLY_PLANT_SLOC Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="SUPPLY_PLANT_CD">
+  <displayName>SUPPLY_PLANT Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="SUPPLY_PLANT">
+  <displayName>SUPPLY_PLANT Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="SUPPLY_COUNTRY_CD">
+  <displayName>SUPPLY_COUNTRY Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="SUPPLY_COUNTRY">
+  <displayName>SUPPLY_COUNTRY Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="SUPPLY_REGION_CD">
+  <displayName>SUPPLY_REGION Id</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="SUPPLY_REGION">
+  <displayName>SUPPLY_REGION Desc</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="SEED_SIZE_CD">
+  <displayName>SEED_SIZE</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="TRAIT_CD">
+  <displayName>TRAIT</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="TREATMENT_CD">
+  <displayName>TREATMENT</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="MFG_NAME_CD">
+  <displayName>MFG_NAME</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="ALLOCATION_UNIT_CD">
+  <displayName>ALLOCATION_UNIT</displayName>
+  <dataType>STRING</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="DEALER_CHANNEL">
+  <displayName>DEALER_CHANNEL</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="SALES_DIRECTOR">
+  <displayName>SALES_DIRECTOR</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="HEAD_OFFICE">
+  <displayName>HEAD_OFFICE</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="BUSINESS_UNIT">
+  <displayName>BUSINESS_UNIT</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="IS_DISCONTINUED">
+  <displayName>ORG_DISCONTINUED</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="ORG_DISCONTINUED_DATE">
+  <displayName>ORG_DISCONTINUED_DATE</displayName>
+  <dataType>Date</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWORGANIZATION_LEAF" column="PLANTING_PRIORITY">
+  <displayName>PLANTING_PRIORITY</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="UOM">
+  <displayName>UOM</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="GROWTH_SEASON">
+  <displayName>GROWTH_SEASON</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="EXPERIMENTAL_NAME">
+  <displayName>EXPERIMENTAL_NAME</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="GLOBAL_NAME">
+  <displayName>GLOBAL_NAME</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="RELATIVE_MATURITY">
+  <displayName>RELATIVE_MATURITY</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="CULTURE">
+  <displayName>CULTURE</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="HYBRID_LIFECYCLE">
+  <displayName>HYBRID_LIFECYCLE</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="PARENTAL_FLAG">
+  <displayName>PARENTAL_FLAG</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="FORECAST_YEAR">
+  <displayName>FORECAST_YEAR</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="FORECAST_PERIOD">
+  <displayName>FORECAST_PERIOD</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="IS_FORECAST">
+  <displayName>IS_FORECAST</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="PROD_DISCONTINUE">
+  <displayName>PROD_DISCONTINUE</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="PROD_DISCONTINUE_DATE">
+  <displayName>PROD_DISCONTINUE_DATE</displayName>
+  <dataType>Date</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="MARKET_PROGRAM_FLAG">
+  <displayName>MARKET_PROGRAM_FLAG</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWPRODUCT_LEAF" column="BRAND_DESCRIPTION">
+  <displayName>BRAND_DESCRIPTION</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="IS_DISCONTINUED">
+  <displayName>SLOC_DISCONTINUED</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWSUPPLY_LEAF" column="SLOC_DISCONTINUED_DATE">
+  <displayName>SLOC_DISCONTINUED_DATE</displayName>
+  <dataType>Date</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="CUSTOMER_CLASS">
+  <displayName>CUSTOMER_CLASS</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="IS_DISCONTINUED">
+  <displayName>CUSTOMER_DISCONTINUED</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWMARKET_LEAF" column="CUSTOMER_DISCONTINUED_DATE">
+  <displayName>CUSTOMER_DISCONTINUED_DATE</displayName>
+  <dataType>Date</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_YEAR_START_MONTH">
+  <displayName>CROP_YEAR_START_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_YEAR_END_MONTH">
+  <displayName>CROP_YEAR_END_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_SEASON1_START_MONTH">
+  <displayName>CROP_SEASON1_START_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_SEASON1_END_MONTH">
+  <displayName>CROP_SEASON1_END_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_SEASON2_START_MONTH">
+  <displayName>CROP_SEASON2_START_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_SEASON2_END_MONTH">
+  <displayName>CROP_SEASON2_END_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_SEASON3_START_MONTH">
+  <displayName>CROP_SEASON3_START_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_SEASON3_END_MONTH">
+  <displayName>CROP_SEASON3_END_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_SEASON4_START_MONTH">
+  <displayName>CROP_SEASON4_START_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="CROP_SEASON4_END_MONTH">
+  <displayName>CROP_SEASON4_END_MONTH</displayName>
+  <dataType>Numeric</dataType>
+  <operators />
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="YEAR_TO_DATE">
+  <displayName>Year To Date</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+<criteria table="VWCATALOG_FORECASTING_UNIT_ORG_L4_CUSTOMER_SUPPLY_PLANT_SLOC" column="YEAR_REMAINING">
+  <displayName>Year Remaining</displayName>
+  <dataType>String</dataType>
+  <operators>
+    <operator>EQUALS</operator>
+    <operator>IN</operator>
+    <operator>LIKE</operator>
+    <operator>STARTS_WITH</operator>
+    <operator>NOT_EQUALS</operator>
+    <operator>NOT_LIKE</operator>
+    <operator>IS_NULL</operator>
+    <operator>IS_NOT_NULL</operator>
+  </operators>
+  <lookup>
+    <permitted>Yes</permitted>
+  </lookup>
+</criteria>
+</criterias>
